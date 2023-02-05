@@ -1,4 +1,4 @@
-Manoj Kumar Padhy<task: Creat Repo>
+Manoj Kumar Padhy<task: Create Repo>
 Ghufran<task: Navbar>
 Akash Kumar<task: sign up>
 Divya Bharti<task: login>
