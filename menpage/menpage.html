@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce-I</title>
+    <style>
+      #prods {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      #prods img {
+        width: 100%;
+      }
+
+      #prods > div {
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+
+      #prods div div {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      p + p {
+        text-decoration: line-through;
+      }
+
+      .btn {
+        background-color: teal;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        width: 100%;
+        padding: 10px 0;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mens page</h1>
+    <a href="Cart.html">Go To Cart</a>
+    <div id="prods"></div>
+  </body>
+  <script>
+    var mensData = [
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-EX4296/reebok_EX4296_1.jpg.plp",
+        name: "MEN'S REEBOK RUNNING ROADMAP SHOES",
+        price: "1170",
+        strikedoffprice: "2599",
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-EX3921/reebok_EX3921_1.jpg.plp",
+        name: "MEN'S REEBOK SWIM ARUBA FLIP SLIPPERS ",
+        price: 699,
+        strikedoffprice: 999,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-EX4160/reebok_EX4160_1.jpg.plp",
+        name: " MEN'S REEBOK RUNNING AUSTIN SHOES",
+        price: 945,
+        strikedoffprice: 2099,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-FV8798/MEN_SWIM_SLIPPERS_FV8798_1.jpg.plp",
+        name: "MEN'S REEBOK SWIM AVENGER FLIP LP SLIPPERS",
+        price: 399,
+        strikedoffprice: 799,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-EW5173/reebok_EW5173_1.jpg.plp",
+        name: "MEN'S REEBOK RUNNING TEMPO SHOES ",
+        price: 1620,
+        strikedoffprice: 3599,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-FV7329/reebok_FV7329_1.jpg.plp ",
+        name: " MEN'S REEBOK RUNNING ASTRO BOOSTER SHOES ",
+        price: 1440,
+        strikedoffprice: 3199,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-GD8567/MEN_TRAINING_PANTS_GD8567_1.jpg.plp ",
+        name: " MEN'S TRAINING WORKOUT READY ELITAGE PANTS ",
+        price: 1999,
+        strikedoffprice: 3199,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-GQ8758/reebok_GQ8758_1.jpg.plp ",
+        name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+        price: 769,
+        strikedoffprice: 1099,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-GP7180/reebok_GP7180_1.jpg.plp",
+        name: "MEN'S REEBOK TRAINING WORKOUT  TEE  ",
+        price: 1299,
+        strikedoffprice: 1440,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-EX3924/reebok_EX3924_1.jpg.plp ",
+        name: "MEN'S REEBOK SUPER SOFT FLIP SLIPPERS",
+        price: 699,
+        strikedoffprice: 999,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-FW0343/reebok_FW0343_1.jpg.plp ",
+        name: "MEN'S REEBOK RUNNING RUN SHOES  ",
+        price: 1620,
+        strikedoffprice: 3599,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-EX4285/reebok_EX4285_1.jpg.plp ",
+        name: "MEN'S REEBOK RUNNING GENESIS RUNNER SHOES  ",
+        price: 1620,
+        strikedoffprice: 3599,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-FV9519/MEN_SWIM_SLIPPERS_FV9519_1.jpg.plp ",
+        name: "MEN'S REEBOK SWIM RUSSLE FLIP SLIPPERS  ",
+        price: 599,
+        strikedoffprice: 999,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-FW0318/reebok_FW0318_1.jpg.plp ",
+        name: " MEN'S REEBOK RUNNING TREND RUNNER SHOES",
+        price: 1575,
+        strikedoffprice: 3499,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-H00024/reebok_H00024_1.jpg.plp ",
+        name: "UNISEX REEBOK RUNNING ZIG KINETICA II SHOES  ",
+        price: 9999,
+        strikedoffprice: 12000,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-GK9170/reebok_GK9170_1.jpg.plp ",
+        name: " MEN'S REEBOK TRAINING BAS POLO TEE ",
+        price: 779,
+        strikedoffprice: 1299,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-GK9175/reebok_GK9175_1.jpg.plp",
+        name: "MEN'S REEBOK TRAINING FOUNDATION  PANTS  ",
+        price: 1019,
+        strikedoffprice: 1699,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-GK9176/reebok_GK9176_1.jpg.plp ",
+        name: "MEN'S REEBOK TRAINING FOUNDATION PANTS  ",
+        price: 1699,
+        strikedoffprice: 1099,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-FW0318/reebok_FW0318_1.jpg.plp ",
+        name: " MEN'S REEBOK RUNNING TREND SHOES",
+        price: 1575,
+        strikedoffprice: 3499,
+      },
+      
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-HG5456/reebok_HG5456_1.jpg.plp",
+        name: "MEN'S REEBOK FITNESS TRAINING  SWEATSHIRT",
+        price: 1079,
+        strikedoffprice: 1799,
+      },
+    ];
+
+    displyProducts();
+
+    function displyProducts() {
+      mensData.map(function (elem, index) {
+        var prodBox = document.createElement("div");
+        var imgUrl = document.createElement("img");
+        imgUrl.setAttribute(
+          "src",
+          "https://media.istockphoto.com/id/154918134/photo/old-brown-boots-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=rt7kCd8MJP52gdz8RkpMzs4Kw8mnls5Ie2omwyXJMW4="
+        );
+
+        var name = document.createElement("h4");
+        name.textContent = elem.name;
+
+        var priceBox = document.createElement("div");
+
+        var MRP = document.createElement("p");
+        MRP.textContent = elem.strikedoffprice;
+
+        var price = document.createElement("p");
+        price.textContent = elem.price;
+
+        priceBox.append(MRP, price);
+
+        var addBtn = document.createElement("button");
+        addBtn.textContent = "Add to Cart";
+        addBtn.setAttribute("class", "btn");
+        addBtn.addEventListener("click", function () {
+          addToCart(index);
+        });
+
+        prodBox.append(imgUrl, name, priceBox, addBtn);
+        document.getElementById("prods").append(prodBox);
+      });
+    }
+    var cartArr = JSON.parse(localStorage.getItem("cart")) || [];
+    function addToCart(index) {
+      var cartItem = mensData.filter(function (elem, i) {
+        return i === index;
+      })
+      cartArr.push(cartItem[0])
+      localStorage.setItem("cart", JSON.stringify(cartArr))
+    }
+  </script>
+</html>
